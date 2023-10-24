@@ -24,4 +24,5 @@ func main() {
 	id := createBook(c)
 	readBook(c, id)
 	updateBook(c, id)
+	listBooks(c)
 }
