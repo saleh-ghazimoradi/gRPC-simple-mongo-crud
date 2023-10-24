@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package crud;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/saleh-ghazimoradi/gRPC-simple-mongo-crud/crud/proto";
+
+message Book {
+  string id = 1;
+  string author_id = 2;
+  string title = 3;
+  string content = 4;
+}
+
+message BookId {
+  string id = 1;
+}
+
+service BookShareService {
+  
+  rpc CreateBook(Book) returns (BookId);
+
+
+  rpc ReadBook(BookId) returns (Book);
+
+
+  rpc UpdateBook(Book) returns (google.protobuf.Empty);
+
+  
+  rpc DeleteBook(BookId) returns (google.protobuf.Empty);
+
+  
+  rpc ListBooks(google.protobuf.Empty) returns (stream Book);
+}
