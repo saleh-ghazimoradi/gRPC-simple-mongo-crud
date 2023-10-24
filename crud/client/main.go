@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	pb "github.com/saleh-ghazimoradi/gRPC-simple-mongo-crud/crud/proto"
@@ -22,5 +21,5 @@ func main() {
 
 	c := pb.NewBookShareServiceClient(conn)
 
-	fmt.Println(c)
+	createBook(c)
 }
