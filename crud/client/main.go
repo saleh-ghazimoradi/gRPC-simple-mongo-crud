@@ -21,5 +21,6 @@ func main() {
 
 	c := pb.NewBookShareServiceClient(conn)
 
-	createBook(c)
+	id := createBook(c)
+	readBook(c, id)
 }
