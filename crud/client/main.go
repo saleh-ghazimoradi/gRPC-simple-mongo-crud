@@ -25,4 +25,5 @@ func main() {
 	readBook(c, id)
 	updateBook(c, id)
 	listBooks(c)
+	deleteBook(c, id)
 }
